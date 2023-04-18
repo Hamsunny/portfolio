@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ham-about</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/about.css">
+
+     <!-- script -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+     <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+     <script src="js/scrolla.jquery.min.js"></script>
+     <script src="js/script.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="innerHeader">
+                <div class="logo " ><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+                <!-- <div class="menu">
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="work.html">WORKS</a></li>
+                        <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    </ul>
+                    <div class="email"><a href="mailto:musicham00@gmail.com? subject= subject text">musicham00@gmail.com</a></div>
+                </div> -->
+
+                <!--menu open-->
+                <div class="menuOpen">
+                    <button class="open"><img src="images/menu.png" alt="메뉴열기"></button>
+                    <div class="menuWrap">
+                        <a href="#" class="close"><img src="img/close.png" alt=""></a>
+                        <a href="#" class="close en"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>
+                          </svg></a>
+                        <ul class="tit">
+                            <li><a href="index.html"><span><b>Home</b></span></a></li>
+                            <li><a href="about.html"><span><b>About</b></span></a></li>
+                            <li><a href="work.html"><span><b>Work</b></span></a></li>
+                            <li><a href="portfolio.html"><span><b>Portfolio</b></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--menu open end-->
+            </div>    
+        </header>
+
+        <section class="visual">
+            <div class="inner">
+                <div class="circle">Hello</div>
+                <div class="img"><img src="images/visual_img01.png" alt=""></div>
+                <div class="txt">
+                    <h2>I'm<br><span>Ham Sun Kyung </span></h2>
+                    <p class="ko"><span>디자인에서 웹퍼블리싱까지 즐기다. </span><br>
+                        13년 동안 한 걸음 한 걸음 나의 길을 나아가는 디자이너 '함선경'입니다.<br>
+                        스타트업의 작은 회사부터 200명 규모의 중견 기업까지 다양한 실무 경험을 바탕으로 
+                        주니어에서 팀 리더로 성장해 가며 소통하고 함께 만들어가는 것을 배웠습니다. 
+                        배움과 성장의 기쁨에 감사하며 좋은 결과물을 위해 디자인 분석, 논리적 표현 그리고 
+                        더 나아가 퍼블리싱까지 관심을 갖고 6개월 NCS과정을 수강하게 되었습니다.<br> 
+                        디자이너에서 멈추지 않고 퍼블리셔의 역량까지 갖추어 한층 더 성장한 능력을 발휘해
+                        보고 싶으며, 그 기회가 주어진다면 최선을 다해 만들어가는 모습을 보여드리고 싶습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="con01">
+            <div class="inner">
+                <h2 class="animate" data-animate="motion">Work Experience</h2>
+                <ul class="list">
+                    <li class="a">
+                        <div class="box">
+                            <p class="tit ko"><span>2022-2021</span>(주)메타스콜레</p>
+                            <p class="ko">메타스콜레 대표사이트 제작<br>
+                                책읽는거인 사이트 제작<br>
+                                태권책거인 사이트 제작<br>
+                                메타스콜레몰 사이트 제작
+                            </p>
+                        </div>  
+                    </li>
+                    <li class="b">
+                        <div class="box">
+                            <p class="tit ko"><span>2020-2019</span>원스타인터내셔널</p>
+                            <p class="ko">유아칫솔 대표 사이트 디자인 및 운영관리<br>
+                                채널관리 및 등록 딜 진행<br>
+                                기획전, 상세페이지, 배너 디자인
+                            </p>
+                        </div>
+                    </li>
+                    <li class="a">
+                        <div class="box">
+                            <p class="tit ko"><span>2020-2019</span>제이에스코퍼레이트</p>
+                            <p class="ko">유아동 편집샵 "아베끄뚜아" 디자인 및 운영<br>
+                                일본 브랜드샵 "마르마르" 디자인 및 운영<br>
+                                종합몰 및 소셜, 기획전, 프로모션 진행
+                            </p>
+                        </div>
+                    </li>
+                    <li class="b">
+                        <div class="box">
+                            <p class="tit ko"><span>2017-2015</span>엔에이치엔위투</p>
+                            <p class="ko">쇼핑몰 "가방팝" 디자인 및 관리(모바일포함)<br>
+                                쇼핑몰 "웨어라운지" 디자인 및 관리 (모바일포함)<br>
+                                쇼핑몰 "멀티팝" 서브디자인<br>
+                                종합몰 및 소셜, 기획전 디자인 진행
+                            </p>
+                        </div>
+                    </li>
+                    <li class="a">
+                        <div class="box">
+                            <p class="tit ko"><span>2015-2013</span>(주)비티몰</p>
+                            <p class="ko">쇼핑몰 "브라이튼몰" 디자인 및 관리<br>
+                                종합몰 및 소셜, 기획전 디자인 진행<br>
+                            </p>
+                        </div>  
+                    </li>
+                    <li class="b">
+                        <div class="box">
+                            <p class="tit ko"><span>2012-2011</span>헬프어학원</p>
+                            <p class="ko">헬프잉글리쉬 대표사이트 디자인 100%<br>
+                                헬프클락사이트 디자인 100%참여<br>
+                                교육관련 컨텐츠제작 디자인
+                            </p>
+                        </div>
+                    </li>
+                    <li class="a">
+                        <div class="box">
+                            <p class="tit ko"><span>2011-2009</span>수빈</p>
+                            <p class="ko">쇼핑몰 "마림"  디자인 및 관리<br>
+                                종합몰 및 소셜, 기획전 디자인 진행<br>
+                                오픈마켓 상점관리 및 상세페이지 디자인
+                            </p>
+                        </div>  
+                    </li>
+                    <li class="b">
+                        <div class="box">
+                            <p class="tit ko"><span>2008-2005</span>(주)이니삭</p>
+                            <p class="ko">종합몰 및 소셜, 기획전 디자인 진행</p>
+                        </div>
+                    </li>
+                    <li class="a">
+                        <div class="box">
+                            <p class="tit ko"><span>2005-2004</span>빌리브</p>
+                            <p class="ko">상세페이지작업, 사이트 등록</p>
+                        </div>  
+                    </li>
+                </ul>
+            </div>
+            
+        </section>
+
+        <section class="con02">
+            <div class="circleBox animate" data-animate="motion"></div>
+            <div class="txtBox">
+                <p class="tit ko animate" data-animate="motion">
+                    기획/ 디자인/ 퍼블리싱까지 즐기는 -
+                </p>
+                <p class="txt ko animate" data-animate="motion"><span>Deisgn & Publishing</span></p>
+                <p class="animate" data-animate="motion">시작과 끝 -</br>
+                    설계에서 구조화까지 소통하며 만들어가는 디자이너 '함선경'입니다.</p>
+            </div>
+            <div class="start flash">
+                <p>Start</p>
+                <p>End</p>
+                
+            </div>
+            
+        </section>
+
+        <section class="con03">
+            <div class="inner">
+                <div class="mySkill ">
+                    <h2 class="animate" data-animate="motion">My Skills</h2>
+                    <p class="ko animate" data-animate="motion">웹표준을 준수하며 시멘틱 마크업을  작성합니다.<br>
+                        유지보수에 최적화 된 코딩을 지향하며 다양한  Jquery 플로그인을<br>
+                        활용 및 커스터마이징하여 여러가지 동적 효과를 구연합니다.
+                    </p>
+                    <div class="icons animate" data-animate="motion">
+                        <p><img src="images/icon_html.png" alt=""></p>
+                        <p><img src="images/icon_css.png" alt=""></p>
+                        <p><img src="images/icon_jq.png" alt=""></p>
+                        <p><img src="images/icon_js.png" alt=""></p>
+                    </div>
+                </div>
+                <div class="tools">
+                    <h2 class="animate" data-animate="motion">Use Tools</h2>
+                    <p class="ko animate" data-animate="motion">IDE툴로는 Vs code를 사용하며 다양한 경험의 디자이너로 <br>
+                        디자인 툴 사용은 물론, 협업 툴 사용 가능합니다.
+                    </p>
+                    <div class="icons animate" data-animate="motion">
+                        <p><img src="images/icon_ps.png" alt=""></p>
+                        <p><img src="images/icon_ai.png" alt=""></p>
+                        <p><img src="images/icon_xd.png" alt=""></p>
+                        <p><img src="images/icon_id.png" alt=""></p>
+                        <p><img src="images/icon_zeplin.png" alt=""></p>
+                        <p><img src="images/icon_pigma.png" alt=""></p>
+                        <p><img src="images/icon_vs.png" alt=""></p>
+                        <p><img src="images/icon_iweb.png" alt=""></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <footer>
+            <div class="inner">
+                <div class="contact">
+                    <div class="txt">
+                        <h2>Contact</h2>
+                        <p class="btn"><a href="tel:01025129113">click</a></p>
+                    </div>
+                    <div class="email_box">
+                        <p><img src="images/arrow_footer.png" alt=""></p>
+                        <p class="email"><a href="mailto:musicham00@gmail.com? subject= subject text">musicham00@gmail.com</a></p>
+                    </div>
+                    
+                </div>
+                <div class="qr">
+                    <img src="images/qr_code.png" alt="">
+                </div>
+            </div>
+        </footer>
+
+    </div><!--wrap-->
+
+
+    <script>
+        
+        gsap.registerPlugin(ScrollTrigger);
+            // 1. x축 horizontalscroll
+            let list = gsap.utils.toArray(".con01 .list li");
+            let listA = gsap.utils.toArray(".con01 .list .a");
+            let listB = gsap.utils.toArray(".con01 .list .b");
+            let listc = gsap.utils.toArray(".con01 .list .c");
+           
+
+            let scrollTween = gsap.to(list, {
+                xPercent: -100 * (list.length - 2),
+                ease: "none",
+                scrollTrigger: {
+                trigger: ".con01",
+                pin: true,
+                scrub: 1,
+                end: "200%",
+                //markers: true,
+                }
+            });
+
+
+
+
+
+
+            
+
+    </script>
+</body>
+</html>

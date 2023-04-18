@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,600&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css');
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+body{font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 26px; color: #fff; background: #000; }
+.ko{font-family: 'NanumSquare', sans-serif; font-weight: normal; font-size: 20px; line-height: 36px; color: #fff;}
+.wrap{width: 100%; overflow: hidden;}
+h2{font-size: 100px; line-height: 1; font-weight: 500;}
+
+
+/* header */
+header{position: fixed; width: 100%; height: 90px; z-index: 200; top: 0; left: 0; transition: all 0.3s; }
+header.active{transform: translateY(-100%); }
+.innerHeader{padding: 0 80px; transition: all 0.3s; max-width: 1720px; }
+.innerHeader .logo{float: left; line-height: 90px;}
+.innerHeader .logo a img{width: 43px; height: 52px; transition: all ease 0.7s;}
+.innerHeader .logo:hover a img{transform: rotate( 360deg );}
+.innerHeader .menu{float: right; font-size: 13px; display: block; margin-top: 17px; line-height: 1.5; }
+.innerHeader .menu ul{float: left; margin-right: 20px;}
+.innerHeader .menu ul li:hover{color: #96D05C; text-decoration: underline; transition: all 0.3s;}
+.innerHeader .menu .email{float: right;}
+.innerHeader .menu .email:hover{opacity: 0.7;}
+.nav-up { top: -90px; /* 헤더 높이와 같게 */}
+
+
+
+/*menuOpen*/
+.menuOpen{float: right;}
+.menuOpen button.open{background: none; border: none; padding: 30px 0; box-sizing: border-box; cursor: pointer;}
+.menuOpen .menuWrap{width: 100%; height: 100vh; position: fixed; top: 0; right: 0; z-index: 100; background: rgba(0, 0, 0, .9);}
+.menuOpen .menuWrap .tit{color: #999; position: absolute; left: 25%; top: 50%; transform: translateY(-50%); font-size: 60px;}
+.menuOpen .menuWrap .tit li a{display: inline-block; position: relative; margin-bottom: 20px; transition: all 0.3s;}
+.menuOpen .menuWrap .tit li a:hover,.menuOpen .menuWrap .tit li a:focus{transform: translateX(30px); color: #96D05C; }
+.menuOpen .menuWrap .tit li a:after{position: absolute; width: 0%; height: 2px; background: #96D05C; bottom: -5px; left: 0; transition: all 0.3s; content: '';}
+.menuOpen .menuWrap .tit li a:hover:after, .menuOpen .menuWrap .tit li a:focus:after{width: 100%;}
+.menuOpen .menuWrap .close:nth-child(1){position: absolute; top: 50%; transform: translateY(-50%); left: 30px;}
+.menuOpen .menuWrap .close{position: absolute; right: 30%; top: 50%; color: #888; }
+.menuOpen .menuWrap .close:hover{color: #96D05C; transition: 0.5s;}
+
+/*menuWrap 열기*/
+.menuOpen .menuWrap{width: 0; transition: 0s; overflow: hidden; transform: skewY(40deg); opacity: 0;}
+.menuOpen .menuWrap.on{width: 100%; right: 0; transform: skewY(0deg); opacity: 1; transition: 0.5s;}
+.menuOpen .menuWrap ul{display: none;}
+.menuOpen .menuWrap.on ul{display: block;}
+
+/*menu 동그라미 열기*/
+.menuOpen .menuWrap.on:before{ content: ''; width: 700px; height: 700px; background: #fff; position: absolute; top: 50%; left: 30%; transform: translateY(-50%); border-radius: 100%;}
+.menuOpen .menuWrap.on:before{animation-name: menuWrap2; animation-duration: 1.8s;}
+
+@keyframes menuWrap2 {
+    0%{opacity: 0;}
+    40%{opacity: 0; transform: translateY(-50%) scale(0.5);}
+}
+
+
+/* footer */
+footer{width: 100%; height: 370px; background: #96D05C; overflow: hidden;}
+footer .inner{width: 90%; margin: 98px auto;}
+footer .inner .contact{float: left;}
+footer .inner .contact .txt{width: 72%; display: flex; justify-content: space-between;}
+footer .inner .contact .txt .btn{background-color: #FDED5B; color: #000; z-index: 1; width: 160px; height: 76px; text-align: center; line-height: 76px; border-radius: 40px; position: relative; margin-top: 15px; cursor: pointer;}
+footer .inner .contact .txt .btn a{display: block; width: 100%; height: 100%;}
+footer .inner .contact .txt .btn:after{ position: absolute; content: ""; width: 100%; height:  0; top: 50%; left: 0; z-index: -1; transition: all 0.2s ease; -webkit-transform: scale(.1); transform: scale(.1); background:  #000; border-radius: 40px;}
+footer .inner .contact .txt .btn:hover {color: #fff; }
+footer .inner .contact .txt .btn:hover:after {top: 0; height: 100%; -webkit-transform: scale(1); transform: scale(1);}
+
+footer .inner .contact .email_box{width: 100%; }
+footer .inner .contact .email_box img{margin-top: -50px;}
+footer .inner .contact .email_box .email{float: right; margin-top: 10px;} 
+footer .inner .contact .email_box .email:hover{color: #333; }
+footer .inner .qr{float: right; width: 170px; height: 170px; }
+footer .inner .qr img{width: 100%; height: 100%;}
+
+
+/* 반응형 시작 */
+
+/* PC */
+@media screen and (max-width:1980px) { /* 1980px ~ 1025px 사이 움직이면서 체크 */
+    .innerHeader {max-width: 100%; padding: 0 80px; box-sizing: border-box;}
+    .menuOpen button.open{opacity: 0;}
+
+ }
+ 
+ /* 1024 테블릿 */  
+ @media screen and (max-width:1400px) { /* 1024px 체크 */
+
+    footer {width: 100%; height: 320px; padding: 0 10px; box-sizing: border-box;}
+    footer .inner .contact {width: 70%;}
+    footer .inner .contact .txt{width: 80%; display: flex; justify-content: space-between;}
+    footer h2{font-size: 70px; margin-top: 10px;}
+    footer .inner .contact .email_box{width: 100%;}
+    footer .inner .contact .email_box img{width: 100%;}
+    footer .email{font-size: 22px; }
+    footer .inner .qr{float: right; width: 140px; height: 140px;}
+    footer .inner .qr img{width: 100%; }
+ }
+ 
+ /* 1024 이하 테블릿 */
+ @media screen and (max-width:1000px) { /* 768px 체크 */
+    .innerHeader {height: 80px; line-height: 80px; padding: 0 50px;}
+    .innerHeader .menu {width: 0; height: 0; opacity: 0; display: none; }
+    .menuOpen button.open {width: 100px; height: 80px; line-height: 80px; opacity: 1; padding: 0 ; padding-right: 50px;} /* 상단에 위치할수 있게 포지션변경 */
+    .menuOpen button.open:before {display: none;}
+ }
+ 
+ /* 모바일 */
+ @media screen and (max-width:767px) { /* 모바일 전부 체크 (가로모드까지) */
+    body {font-size: 13px;}
+    .innerHeader {height: 60px; line-height: 60px; padding: 10px 20px; } 
+    .innerHeader .logo{float: left; line-height: 60px;}
+    .menuOpen button.open { height: 60px; line-height: 60px; }
+    .menuOpen button.open {height: 60px; line-height: 60px; width: 52px;}
+    .menuOpen button.open img {height: 38px}
+    .menuOpen .menuWrap .tit {font-size:35px; left: 30%;}
+    .menuOpen .menuWrap.on:before {left: 20%;}
+    footer .inner .contact .txt .btn{ width: 80px; height: 56px; text-align: center; line-height: 56px; border-radius: 40px; position: relative; margin-top: 15px; cursor: pointer;}
+ }
+
+ /* 320 모바일 */
+ @media screen and (max-width:320px) { /* 320px 체크 */
+    body {font-size: 12px;}
+    .innerHeader {height: 40px; line-height: 40px; padding: 10px 20px; } 
+    .innerHeader .logo{float: left; line-height: 40px;}
+    footer {width: 100%; height: 260px; padding: 0 10px; box-sizing: border-box;}
+    footer .inner{width: 90%; margin: 20px auto;}
+    footer .inner .contact {width: 100%;}
+    footer .inner .contact .txt{width: 80%; display: flex; justify-content: space-between;}
+    footer .inner .contact .txt .btn{background-color: #FDED5B; color: #000; z-index: 1; width: 60px; height: 40px; text-align: center; line-height: 40px; border-radius: 40px; position: relative; margin-top: 15px; cursor: pointer;}
+    footer h2{font-size: 35px; margin-top: 10px;}
+    footer .inner .contact .email_box{width: 100%; text-align: center; margin-top: 10px;}
+    footer .inner .contact .email_box img{width: 100%;}
+    footer .email{font-size: 18px; }
+    footer .inner .qr{width: 100px; height: 100px; }
+    footer .inner .qr img{width: 100%; }
+ }

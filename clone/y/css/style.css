@@ -1,0 +1,157 @@
+@charset "utf=8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+/* layout */
+body{font-family: 'Noto Sans KR', sans-serif; font-size: 15px;}
+.wrap{width: 100%; margin: 0 auto; background: #fff; overflow: hidden; position: relative;}
+
+/* header */
+header{width: 100%; position: fixed; z-index: 100;  padding-top: 30px;}
+.innerHeader{padding: 0 80px; height: 80px; }
+.innerHeader .logo{width: 170px; height: 60px; float: left; margin-right: 180px;}
+.innerHeader .logo a{display: block; width: 100%; height: 100%; position: relative;}
+.innerHeader .logo a img{width: 100%; z-index: 50; position: absolute; left: 0; top: 0;}
+.innerHeader .logo a img:nth-child(2){opacity: 0;}
+.innerHeader .introTxt{float: left; text-transform: uppercase; color: #fff; line-height: 70px;;}
+header .innerHeader .menuOpen{float: right; display: block; color: #fff; font-size: 16px; font-weight: bold; line-height: 70px;}
+header .innerHeader .menuOpen span{display: inline-block; margin-left: 15px; font-size: 33px; vertical-align: middle; margin-top: -6px;}
+
+/*gnb*/
+.gnb{padding: 70px 100px; height: 100vh; background: #1b1b1b; position: absolute; z-index: 200; right: -100%; top: 0; color: #fff; transition: all 0.8s;}
+.gnb.on{right: 0; transition: all 0.8s;}
+.gnb .close{float: right; font-size: 40px; display: block;} 
+.gnb ul{float: left; margin-right: 200px;}
+.gnb ul li a{display: block; font-size: 40px; line-height: 1.7; font-weight: bold; transition: all 0.3s; color: #888;}
+.gnb ul li:first-child a, .gnb ul li a:hover{color: #fff; transition: all 0.5s;}
+
+/*fixHeader*/
+header.no{padding: 20px 0 0; transition: all 0.5s;}
+header::before{content: ''; width: 100%; height: 0%; background: #1b1b1b; position: absolute; top: 0; transition: all 0.3s; z-index: -1;}
+header.on::before{height: 100%; transition: all 0.3s; border-bottom: 1px solid #2c2c2c;}
+header.on .innerHeader .logo a img:nth-child(2){opacity: 1; transition: all 0.5s; } 
+
+/* section.visual */
+.visual{position: relative;}
+.visual .slide li{width: 100%; height: 100vh; background: #222; position: relative;}
+.visual .slide li img{position: absolute; bottom: 0; right: 0;} 
+.visual .slide li .txt{position: absolute; left: 10%; top: 50%; transform: translateY(-50%); font-size: 18px; color: #fff; }
+.visual .slide li h3{font-size: 64px;}
+.visual .slide li.txt a{display: inline-block;}
+.visual .slide li.txt a span{font-size: 14px; margin-left: 5px;}
+.visual .slide li .scroll{position: absolute; left: 50px; bottom: 10%; font-size: 14px; font-weight: bold; color: #ccc; transform: rotate(-90deg);}
+
+/*slick.js slide*/
+.slick-arrow{position: absolute; right: 0; bottom: 0; width: 60px; height: 60px; line-height: 60px; background: #fff; border: none; text-indent: -9999px; z-index: 20;}
+.slick-arrow:after{content: '>'; position: absolute; width: 100%; height: 100%; color: #888; font-size: 20px; left: 0; top: 0; text-indent:0; font-weight: 300; transition: all 0.2s;}
+.slick-arrow.slick-prev{bottom: 60px;}
+.slick-arrow.slick-next::after{content: '<';} 
+
+/*hover*/
+.slick-arrow:hover{cursor: pointer; background: #ccc; transition: all 0.5s;}
+.slick-arrow:hover:after{font-size: 28px; color: #333; transition: all 0.3s;}
+
+/*이미지 슬라이드 모션*/
+.slick-active .txt p{animation-name: txt1 ; animation-duration: 0.8s;}
+@keyframes txt1{
+    0%{opacity: 0; transform: rotateX(180deg)translateY(-150px);}
+    20%{opacity: 0; transform: rotateX(180deg)translateY(-150px);}
+}
+
+.slick-active .txt a{animation-name: txt2 ; animation-duration: 0.8s;}
+@keyframes txt2{
+    0%{opacity: 0; transform: rotateX(180deg)translateY(150px);}
+    20%{opacity: 0; transform: rotateX(180deg)translateY(150px);}
+}
+
+.slick-active .txt h3{animation-name: txt3 ; animation-duration: 0.7s;}
+@keyframes txt3{
+    0%{opacity: 0; transform: translateX(0px);}
+    40%{opacity: 0; transform: translateX(-50px);}
+}
+
+.slick-active .scroll{animation-name: scroll ; animation-duration: 1s;}
+@keyframes scroll{
+    0%{opacity: 0; left: -100px;}
+    30%{opacity: 0; left: -100px;}
+    
+}
+.slick-active img{animation-name: img ; animation-duration: 1s;}
+@keyframes img{
+    0%{opacity: 0; right: -80px; transform: scale(0.9);}
+    
+}
+
+/* contents */
+.contents{width: 100%; background: #1d1d1d; padding: 120px 0;}
+.contents .mainText{width: 1170px; margin: 0 auto;overflow: hidden; color: #fff; position: relative; padding-bottom: 150px;}
+.contents .mainText h3{float: left; font-size: 25px; font-weight: bold; width: 30%; line-height: 1.2;}
+.contents .mainText:after{content: '”'; font-size: 300px; position: absolute; left: 0; top: 60px; font-weight: 400;}
+.contents .mainText:before{content: ''; width: 95px; height: 95px; background: #ffec03; position: absolute; left: 70px; top: 130px; border-radius: 50%;} 
+
+.contents .mainText p{float: right; width: 70%; font-size: 25px; line-height: 1.4; font-weight: 300;}
+.contents .mainText p span{display: block; margin-top: 50px; color: #999; font-size: 20px; font-weight: 400;}
+
+/* project */
+.project{ color: #fff;}
+.project .top{width: 1170px; margin: 150px auto 60px; height: 90px;}
+.project .top h3{float: left; font-size: 35px; font-weight: bold; line-height: 1.3;}
+.project .top a{float: right; font-size: 18px; display: block;}
+.project ul{width: 98%; margin: 0 auto; overflow: hidden;}
+.project ul li{float: left; width: 24.2%; margin-right: 1%;}
+.project ul li:last-child{margin-right: 0;}
+.project ul li a{display: block; width: 100%; height: 100%; position: relative; font-weight: bold; overflow: hidden;}
+.project ul li a img{width: 100%; transition: all 0.5s; }
+.project ul li a .name{position: absolute ; background: #1b1b1b; right: 0; bottom: 0; padding: 15px 25px; box-sizing: border-box; width: 270px; text-align: right; font-size: 22px;}
+.project ul li a .name span{font-size: 15px; font-weight: 400;}
+.project ul li a .name h3{text-transform: uppercase;}
+.project ul li a:hover img, .project ul li a:focus img{transform: scale(1.2);}
+
+/* partner */
+.partner{width: 1170px; margin: 120px auto; color: #fff;}
+.partner h3{font-size: 17px; font-weight: 400;}
+.partner ul{overflow: hidden;}
+.partner ul li{float: left; width: 29%; height: 100px; text-align: center; margin-top: 80px;}
+.partner ul li:nth-child(1),.partner ul li:nth-child(5){width: 21%; text-align: left;}
+.partner ul li:nth-child(4n){width: 21%; text-align: right;}
+.partner ul li img{opacity: 0.4; transition: all 0.4s;}
+.partner ul li:hover img{opacity: 1;}
+
+/* contact */
+.contact{width: 100%; background: url(../img/contact.jpg) no-repeat; background-size: 90%; background-position: left; background-attachment: fixed; color: #fff; padding: 190px 0;} 
+.contact .inner{width: 1170px; margin: 0 auto; font-size: 17px; line-height: 1.3;}
+.contact .inner h3{font-weight: 400;}
+.contact .inner .tel{font-size: 55px; font-weight: bold; margin: 50px 0;}
+
+/* footer */
+footer{background: #121212; color: #999; padding: 0 80px 80px; box-sizing: border-box; position: relative;}
+footer ul{overflow: hidden;}
+footer ul li{float: left; width: 33.3333%;}
+footer ul li:nth-child(2){font-size: 16px; color: #eee; line-height: 2;}
+footer ul li:nth-child(2) span{color: #999; font-weight: bold; margin-right: 10px;}
+
+footer .goTop{position: absolute; right: 80px; bottom: 60px; font-size: 48px; color: #fff;}
+
+/*Responsice Web*/
+/*1200~1025px*/
+@media screen and (max-width:1200px) {
+    br.mo{display: none;}
+    .contents .mainText, .contents .project .top, .contents .partner, .contents .partner .contact .inner {width: 92%;}
+    .slick-arrow:hover{cursor: pointer; background: #fff;}
+    .slick-arrow:after{font-size: 20px; color:#999}
+    .contents .project ul li a .name{padding-bottom: 30px; font-size: 20px;}
+    .contents .project ul li a .name::after{content: '→'; position: absolute; right: 15px; bottom: 0; font-size: 18px;}
+     /*https://unicode-table.com/kr/ 특수기호 카피 가능 */
+
+}
