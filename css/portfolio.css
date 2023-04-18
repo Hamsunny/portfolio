@@ -4,12 +4,19 @@
 
 .cont01{height: 100vh; overflow: hidden; position: relative; }
 .cont01 .inner{padding: 190px 0; width: 90%; margin: auto; box-sizing: border-box; display: flex; justify-content: space-between;}
-.cont01 .inner .txtBoxt{margin: 200px 0 0 100px; }
+.cont01 .inner .txtBoxt{margin: 200px 0 0 100px;}
 .cont01 .inner .txtBoxt h2{margin-bottom: 20px; animation-name: textAni; animation-duration: 0.8s;}
 .cont01 .inner .txtBoxt P{animation-name: slide_up; animation-duration: 1s;}
+.cont01 .inner .txtBoxt .btn{background-color: #96D05C; color: #fff; z-index: 1; margin-top: 20px; width: 260px; height: 76px; text-align: center; line-height: 76px; border-radius: 40px; position: relative; cursor: pointer;}
+.cont01 .inner .txtBoxt .btn a{display: block; width: 100%; height: 100%;}
+.cont01 .inner .txtBoxt .btn:after{ position: absolute; content: ""; width: 100%; height:  0; top: 50%; left: 0; z-index: -1; transition: all 0.2s ease; -webkit-transform: scale(.1); transform: scale(.1); background:  #FDED5B; border-radius: 40px;}
+.cont01 .inner .txtBoxt .btn:hover {color: #000; }
+.cont01 .inner .txtBoxt .btn:hover:after {top: 0; height: 100%; -webkit-transform: scale(1); transform: scale(1);}
 .cont01 .inner .imgBox{width: 800px; height: 600px; margin-right: 50px; background: url(../images/portfolio_vimg.png)no-repeat center/cover;}
 .cont01 .inner .imgBox p{width: 634px; height: 365px; margin-top: 44px; margin-left: 81px;  overflow: hidden; }
 .cont01 .inner .imgBox p img{width: 100%; animation: pageup 20s infinite; animation-delay: 1s;}
+
+
 
 /*모니터 스크롤 up*/
 @keyframes pageup{
@@ -47,7 +54,6 @@
   }
 
   .cont02 .inner .story .line.motion{ animation-name: line; animation-duration: 1s;}
-
   .cont02 .inner .story .left.motion, .cont02 .inner .story .right.motion{animation-name: slide_up2; animation-duration: 0.8s}
 
   .cont03 .inner .info>h2.motion, .cont03 .inner .kyeword>h2.motion, .cont03 .inner .style>h2.motion, .cont03 .inner .logoD>h2.motion, .cont04 .inner .idea h2.motion, .cont04 .inner .wire h2.motion{animation-name: slide_up; animation-duration: 0.5s}

@@ -90,7 +90,7 @@ footer .inner .qr img{width: 100%; height: 100%;}
 /* PC */
 @media screen and (max-width:1980px) { /* 1980px ~ 1025px 사이 움직이면서 체크 */
     .innerHeader {max-width: 100%; padding: 0 80px; box-sizing: border-box;}
-    .menuOpen button.open{opacity: 0;}
+    .menuOpen button.open{opacity: 1;}
 
  }
  
